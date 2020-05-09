@@ -14,19 +14,35 @@ const serverHandler = (req, res) => {
   req.query = querystring.parse(url.split('?')[1])
 
   // 处理 blog 路由
+  const blogResult = handleBlogRouter(req, res)
+  if (blogResult) {
+    blogResult.then(blogData => {
+      res.end(JSON.stringify(blogData))
+    })
+    return
+  }
+  /*
   const blogData = handleBlogRouter(req, res)
   if (blogData) {
     res.end(JSON.stringify(blogData))
     return
   }
-
+  */ 
   // 处理 user 路由
+  const userResult = handlerUserRouter(req, res)
+  if (userResult) {
+    userResult.then(userData => {
+      res.end(JSON.stringify(userData))
+    })
+    return
+  }
+  /*
   const userData = handlerUserRouter(req, res)
   if (userData) {
     res.end(JSON.stringify(userData))
     return
   }
-
+  */ 
   // 未命中路由，返回 404
   res.writeHead(404, {"Content-type": "text/plain"})
   res.write("404 Not Found\n")
