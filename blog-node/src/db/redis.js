@@ -10,12 +10,13 @@ function set(key, val) {
   if (typeof val === 'object') {
     val = JSON.stringify(val)
   }
+
   redisClient.set(key, val, redis.print)
 }
 
 function get(key) {
   const promise = new Promise((resolve, reject) => {
-    redisClient.get(key, (val, err) => {
+    redisClient.get(key, (err, val) => {
       if (err) {
         reject(err)
         return
