@@ -20,6 +20,7 @@ router.post('/login', function(req, res, next) {
   })
 })
 
+/*
 router.get('/login-test', function(req, res, next) {
   if (req.session.username) {
     res.json({
@@ -44,5 +45,6 @@ router.get('/session-test', function(req, res, next) {
     viewNum: session.viewNum
   })
 })
+*/
 
 module.exports = router
