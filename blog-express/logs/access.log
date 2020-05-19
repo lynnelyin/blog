@@ -1,0 +1,4 @@
+::1 - - [19/May/2020:09:41:52 +0000] "GET /api/blog/list HTTP/1.0" 304 - "http://127.0.0.1:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+::ffff:127.0.0.1 - - [19/May/2020:09:41:54 +0000] "GET /api/blog/detail?id=10 HTTP/1.0" 304 - "http://127.0.0.1:8080/detail.html?id=10" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+::1 - - [19/May/2020:09:41:57 +0000] "GET /api/blog/list?author=lisi HTTP/1.0" 200 230 "http://127.0.0.1:8080/index.html?author=lisi" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+::ffff:127.0.0.1 - - [19/May/2020:09:41:59 +0000] "GET /api/blog/detail?id=2 HTTP/1.0" 200 108 "http://127.0.0.1:8080/detail.html?id=2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
